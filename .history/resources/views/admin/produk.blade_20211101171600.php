@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Data Transaksi</h1>
+                <h1>Data Produk</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -33,31 +33,20 @@
                                         <form>
                                             <div class="card-body">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Nama Pelanggan</label>
+                                                    <label for="exampleInputEmail1">Kategori</label>
                                                     <input type="email" class="form-control" id="exampleInputEmail1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">No Whatsapp</label>
+                                                    <label for="exampleInputPassword1">Nama Produk</label>
                                                     <input type="password" class="form-control" id="exampleInputPassword1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Jenis Produk</label>
+                                                    <label for="exampleInputPassword1">Gambar</label>
                                                     <input type="password" class="form-control" id="exampleInputPassword1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Total Pembayaran</label>
+                                                    <label for="exampleInputPassword1">Deskripsi</label>
                                                     <input type="password" class="form-control" id="exampleInputPassword1">
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="input-group-prepend">
-                                                        <button type="button" class="btn btn-general dropdown-toggle" data-toggle="dropdown">
-                                                            Status
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li class="dropdown-item"><a href="#">Lunas</a></li>
-                                                            <li class="dropdown-item"><a href="#">DP</a></li>
-                                                        </ul>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->
@@ -82,13 +71,11 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Nama Pelanggan</th>
-                                    <th>No WhatsApp</th>
                                     <th>Kategori</th>
                                     <th>Nama Produk</th>
                                     <th>Harga Produk</th>
-                                    <th>Total Pembayaran</th>
-                                    <th>Status</th>
+                                    <th>Gambar</th>
+                                    <th>Deskripsi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -98,8 +85,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -107,8 +92,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -116,8 +99,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -125,19 +106,22 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
+                                </tr>
+                                <tr>
+                                    <td>Firman Anshari Adjie</td>
+                                    <td>+628788890221</td>
+                                    <td>Alat</td>
+                                    <td>Board</td>
+                                    <td>Rp 50.000</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Nama Pelanggan</th>
-                                    <th>No WhatsApp</th>
                                     <th>Kategori</th>
                                     <th>Nama Produk</th>
                                     <th>Harga Produk</th>
-                                    <th>Total Pembayaran</th>
-                                    <th>Status</th>
+                                    <th>Gambar</th>
+                                    <th>Deskripsi</th>
                                 </tr>
                             </tfoot>
                         </table>

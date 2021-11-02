@@ -1,11 +1,11 @@
 @extends('admin.partials.header')
-
+<link rel="stylesheet" href="admin/plugins/dropzone/min/dropzone.min.css">
 @section('container')
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Data Transaksi</h1>
+                <h1>Data Produk</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -33,31 +33,69 @@
                                         <form>
                                             <div class="card-body">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Nama Pelanggan</label>
+                                                    <label for="exampleInputEmail1">Kategori</label>
                                                     <input type="email" class="form-control" id="exampleInputEmail1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">No Whatsapp</label>
+                                                    <label for="exampleInputPassword1">Nama Produk</label>
                                                     <input type="password" class="form-control" id="exampleInputPassword1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Jenis Produk</label>
+                                                    <label for="exampleInputPassword1">Harga Produk</label>
                                                     <input type="password" class="form-control" id="exampleInputPassword1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Total Pembayaran</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1">
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="input-group-prepend">
-                                                        <button type="button" class="btn btn-general dropdown-toggle" data-toggle="dropdown">
-                                                            Status
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li class="dropdown-item"><a href="#">Lunas</a></li>
-                                                            <li class="dropdown-item"><a href="#">DP</a></li>
-                                                        </ul>
+                                                    <div class="card-body">
+                                                        <div id="actions" class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="btn-group w-100">
+                                                                    <span class="btn btn-success col fileinput-button">
+                                                                        <i class="fas fa-plus"></i>
+                                                                        <span>Add files</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table table-striped files" id="previews">
+                                                            <div id="template" class="row mt-2">
+                                                                <div class="col-auto">
+                                                                    <span class="preview"><img src="data:," alt="" data-dz-thumbnail /></span>
+                                                                </div>
+                                                                <div class="col d-flex align-items-center">
+                                                                    <p class="mb-0">
+                                                                        <span class="lead" data-dz-name></span>
+                                                                        (<span data-dz-size></span>)
+                                                                    </p>
+                                                                    <strong class="error text-danger" data-dz-errormessage></strong>
+                                                                </div>
+                                                                <div class="col-4 d-flex align-items-center">
+                                                                    <div class="progress progress-striped active w-100" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto d-flex align-items-center">
+                                                                    <div class="btn-group">
+                                                                        <button class="btn btn-primary start">
+                                                                            <i class="fas fa-upload"></i>
+                                                                            <span>Start</span>
+                                                                        </button>
+                                                                        <button data-dz-remove class="btn btn-warning cancel">
+                                                                            <i class="fas fa-times-circle"></i>
+                                                                            <span>Cancel</span>
+                                                                        </button>
+                                                                        <button data-dz-remove class="btn btn-danger delete">
+                                                                            <i class="fas fa-trash"></i>
+                                                                            <span>Delete</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Deskripsi</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1">
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->
@@ -82,13 +120,11 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Nama Pelanggan</th>
-                                    <th>No WhatsApp</th>
                                     <th>Kategori</th>
                                     <th>Nama Produk</th>
                                     <th>Harga Produk</th>
-                                    <th>Total Pembayaran</th>
-                                    <th>Status</th>
+                                    <th>Gambar</th>
+                                    <th>Deskripsi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -98,8 +134,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -107,8 +141,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -116,8 +148,6 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
                                 </tr>
                                 <tr>
                                     <td>Firman Anshari Adjie</td>
@@ -125,19 +155,22 @@
                                     <td>Alat</td>
                                     <td>Board</td>
                                     <td>Rp 50.000</td>
-                                    <td>Rp 20.000</td>
-                                    <td>DP</td>
+                                </tr>
+                                <tr>
+                                    <td>Firman Anshari Adjie</td>
+                                    <td>+628788890221</td>
+                                    <td>Alat</td>
+                                    <td>Board</td>
+                                    <td>Rp 50.000</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Nama Pelanggan</th>
-                                    <th>No WhatsApp</th>
                                     <th>Kategori</th>
                                     <th>Nama Produk</th>
                                     <th>Harga Produk</th>
-                                    <th>Total Pembayaran</th>
-                                    <th>Status</th>
+                                    <th>Gambar</th>
+                                    <th>Deskripsi</th>
                                 </tr>
                             </tfoot>
                         </table>
