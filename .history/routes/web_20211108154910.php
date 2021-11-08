@@ -1,6 +1,6 @@
 <?php
 
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
@@ -18,8 +18,8 @@ use App\Http\Controllers\TransaksiController;
 |
 */
 
-
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Auth::routes();
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/', function () {

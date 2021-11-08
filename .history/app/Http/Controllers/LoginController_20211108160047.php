@@ -28,7 +28,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin');
         }
 
-        return back()->with('loginError', 'Login Failed!');
-        // return dd('gagal');
+        // return back()->with('loginError', 'Login Failed!');
+        return dd('gagal')
     }
 }

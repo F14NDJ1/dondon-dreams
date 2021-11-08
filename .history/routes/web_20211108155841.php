@@ -1,6 +1,6 @@
 <?php
 
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
@@ -28,6 +28,6 @@ Route::get('/', function () {
 
 
 
-Route::get('/admin', [TransaksiController::class, 'index']);
+Route::get('/admin', [TransaksiController::class, 'index'])->name('login')->middleware('auth');
 Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/data_admin', [AdminController::class, 'index']);
